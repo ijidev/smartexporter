@@ -9,7 +9,7 @@
     echo " Error retriving tracking info" ;
   } else {
     curl_setopt_array($curl, array(
-      CURLOPT_URL => 'https://api-test.dhl.com/track/shipments?trackingNumber='.$tracking_code,
+      CURLOPT_URL => 'https://api-eu.dhl.com/track/shipments?trackingNumber='.$tracking_code,
       CURLOPT_RETURNTRANSFER => true,
       CURLOPT_ENCODING => '',
       CURLOPT_MAXREDIRS => 10,
