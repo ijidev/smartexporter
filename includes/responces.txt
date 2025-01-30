@@ -1,0 +1,84 @@
+Array ( 
+  [shipments] => Array ( 
+    [0] => Array ( 
+      [id] => 2250509343 
+      [service] => express 
+      
+      [origin] => Array ( 
+        [address] => Array ( 
+          [addressLocality] => LAGOS - NIGERIA 
+        ) 
+        [servicePoint] => Array ( 
+          [url] => http://www.dhl.com.ng/en/country_profile.html 
+          [label] => Origin Service Area ) 
+        ) 
+
+        [destination] => Array ( 
+          [address] => Array ( 
+            [addressLocality] => MAIDSTONE - UK 
+          ) 
+          [servicePoint] => Array ( 
+            [url] => http://www.dhl.co.uk/en/country_profile.html 
+            [label] => Destination Service Area 
+          ) 
+        ) 
+
+        [status] => Array ( 
+          [timestamp] => 2025-01-22T18:26:00+01:00 
+          [location] => Array ( 
+            [address] => Array ( 
+              [addressLocality] => LAGOS - NIGERIA 
+              [countryCode] => NG 
+            ) 
+          ) 
+          [statusCode] => pre-transit 
+          [status] => 104 
+          [description] => Shipment information received 
+        ) 
+        
+        [returnFlag] => [details] => Array ( 
+          [product] => Array ( 
+            [productCode] => P 
+            [productName] => EXPRESS WORLDWIDE 
+          ) 
+          [shipper] => Array ( 
+            [@type] => Organization 
+            [address] => Array ( 
+              [countryCode] => NG 
+            ) 
+          ) 
+          [consignee] => Array ( 
+            [@type] => Organization 
+            [address] => Array ( 
+              [countryCode] => GB 
+            ) 
+          ) 
+          [proofOfDelivery] => Array ( 
+            [documentUrl] => https://proview.dhl.com/proview/adhocnotify?id=DJ%2BbyJmxaPZJD1YMyl4XpI9b26j7c1ZA4zmMXhtLdRM%3D&appuid=BqSQ3EhzbsvHcZuau8eb9w%3D%3D&locale=en&token=NdjHtK0dFpYUwvCxj9snN7A0V4qA124LF2O22zX5298%3D 
+            [signatureUrl] => https://proview.dhl.com/proview/adhocnotify?id=DJ%2BbyJmxaPZJD1YMyl4XpI9b26j7c1ZA4zmMXhtLdRM%3D&appuid=BqSQ3EhzbsvHcZuau8eb9w%3D%3D&locale=en&token=NdjHtK0dFpYUwvCxj9snN7A0V4qA124LF2O22zX5298%3D 
+          ) 
+          [proofOfDeliverySignedAvailable] => [totalNumberOfPieces] => 1 [pieceIds] => Array ( 
+            [0] => JD014600011892065276 
+          ) 
+          [controlledDataCodes] => Array ( 
+            [0] => shipper-city [1] => consignee-city 
+          ) 
+        ) 
+        
+        [events] => Array ( 
+          [0] => Array ( 
+            [timestamp] => 2025-01-22T18:26:00+01:00 
+            [location] => Array ( 
+              [address] => Array ( 
+                [addressLocality] => LAGOS - NIGERIA 
+                [countryCode] => NG 
+              ) 
+            ) 
+            [statusCode] => unknown 
+            [status] => SD 
+            [description] => Shipment information received 
+          ) 
+        ) 
+      ) 
+    ) 
+  )

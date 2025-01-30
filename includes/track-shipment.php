@@ -1,13 +1,11 @@
 <?php
 
-  echo $_POST['tracking_code'] ;
+  // echo $_POST['tracking_code'] ;
 
   $tracking_code = $_POST['tracking_code'];
   $curl = curl_init();
 
-  if (!$curl) {
-    echo " Error retriving tracking info" ;
-  } else {
+  
     curl_setopt_array($curl, array(
       CURLOPT_URL => 'https://api-eu.dhl.com/track/shipments?trackingNumber='.$tracking_code,
       CURLOPT_RETURNTRANSFER => true,
@@ -25,8 +23,14 @@
     $response = curl_exec($curl);
 
     curl_close($curl);
-    echo $response;
-  }
+
+    $data = json_decode($response, true) ;
+    $shipment = $data['shipments'][0];
+
+    echo $shipment['service'];
+    echo "<br>";
+    print_r($data);
+  
   
 
 ?>
