@@ -1,47 +1,40 @@
 <?php
+	// echo $_POST['tracking_code'] ;
 
-  // echo $_POST['tracking_code'] ;
+	$tracking_code = $_POST['tracking_code'];
+	$curl = curl_init();
 
-  $tracking_code = $_POST['tracking_code'];
-  $curl = curl_init();
 
-  
-    curl_setopt_array($curl, array(
-      CURLOPT_URL => 'https://api-eu.dhl.com/track/shipments?trackingNumber='.$tracking_code,
-      CURLOPT_RETURNTRANSFER => true,
-      CURLOPT_ENCODING => '',
-      CURLOPT_MAXREDIRS => 10,
-      CURLOPT_TIMEOUT => 0,
-      CURLOPT_FOLLOWLOCATION => true,
-      CURLOPT_HTTP_VERSION => CURL_HTTP_VERSION_1_1,
-      CURLOPT_CUSTOMREQUEST => 'GET',
-      CURLOPT_HTTPHEADER => array(
-        'DHL-API-Key: DwuAtkLvmQ4gj7jXOTsO3UFjeOPA6Pec'
-      ),
-    ));
+	curl_setopt_array($curl, array(
+		CURLOPT_URL => 'https://api-eu.dhl.com/track/shipments?trackingNumber='.$tracking_code,
+		CURLOPT_RETURNTRANSFER => true,
+		CURLOPT_ENCODING => '',
+		CURLOPT_MAXREDIRS => 10,
+		CURLOPT_TIMEOUT => 0,
+		CURLOPT_FOLLOWLOCATION => true,
+		CURLOPT_HTTP_VERSION => CURL_HTTP_VERSION_1_1,
+		CURLOPT_CUSTOMREQUEST => 'GET',
+		CURLOPT_HTTPHEADER => array(
+		'DHL-API-Key: DwuAtkLvmQ4gj7jXOTsO3UFjeOPA6Pec'
+		),
+	));
 
-    $response = curl_exec($curl);
+	$response = curl_exec($curl);
 
-    curl_close($curl);
+	curl_close($curl);
 
-    $data = json_decode($response, true) ;
-    $shipment = $data['shipments'][0];
+	$data = json_decode($response, true) ;
+	$shipment = $data['shipments'][0];
 
-    // echo $shipment['service'];
-    // echo "<br>";
-    // print_r($data);
+	// echo $shipment['service'];
+	// echo "<br>";
+	// print_r($data);
 ?>
 
+<?php include('includes/header.php') ?>
 
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Shipment Tracking - The smartexporter</title>
-    <!-- Bootstrap 5 CSS -->
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
-    <style>
+
+	<style>
         body {
             background-color: #f8f9fa;
             min-height: 100vh;
@@ -88,9 +81,8 @@
             transition: transform 0.2s;
         }
     </style>
-</head>
-<body>
-    <div class="container py-5">
+	
+	<div class="container py-5">
         <!-- Header Section -->
         <div class="row mb-4">
             <div class="col-12">
@@ -140,16 +132,17 @@
                     <h4 class="mb-4">Shipment Details</h4>
                     <div class="mb-3">
                         <h6 class="text-muted mb-1">From</h6>
-                        <p class="mb-0">{{senderName}}<br>
+                        <!-- <p class="mb-0">{{senderName}}<br> -->
                         <?php echo $shipment['origin']['address']['addressLocality'] ?></p>
                     </div>
+                    <hr>
                     <div class="mb-3">
                         <h6 class="text-muted mb-1">To</h6>
-                        <p class="mb-0">{{recipientName}}<br>
+                        <!-- <p class="mb-0">{{recipientName}}<br> -->
                         <?php echo $shipment['destination']['address']['addressLocality'] ?></p>
                     </div>
-                    <hr>
-                    <div class="row">
+                    
+                    <!-- <div class="row">
                         <div class="col-6">
                             <h6 class="text-muted mb-1">Est. Delivery</h6>
                             <p class="mb-0">{{estimatedDelivery}}</p>
@@ -158,13 +151,10 @@
                             <h6 class="text-muted mb-1">Weight</h6>
                             <p class="mb-0">{{weight}}</p>
                         </div>
-                    </div>
+                    </div> -->
                 </div>
             </div>
         </div>
     </div>
 
-    <!-- Bootstrap JS -->
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
-</body>
-</html>
+<?php include('includes/footer.php') ?>
