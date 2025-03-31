@@ -8,10 +8,10 @@ $mail = new PHPMailer();
 
 //$mail->SMTPDebug = 3;                               // Enable verbose debug output
 $mail->isSMTP();                                      // Set mailer to use SMTP
-$mail->Host = 'just55.justhost.com';                  // Specify main and backup SMTP servers
+$mail->Host = 'mail.thesmartexporter.com';                  // Specify main and backup SMTP servers
 $mail->SMTPAuth = true;                               // Enable SMTP authentication
-$mail->Username = 'themeforest@ismail-hossain.me';    // SMTP username
-$mail->Password = 'AsDf12**';                         // SMTP password
+$mail->Username = 'support@thesmartexporter.com';    // SMTP username
+$mail->Password = '@admin?1234';                         // SMTP password
 $mail->SMTPSecure = 'ssl';                            // Enable TLS encryption, `ssl` also accepted
 $mail->Port = 465;                                    // TCP port to connect to
 
@@ -19,31 +19,35 @@ $message = "";
 $status = "false";
 
 if( $_SERVER['REQUEST_METHOD'] == 'POST' ) {
-    if( $_POST['form_email'] != '' AND $_POST['form_service'] != '' ) {
+    if( $_POST['email'] != '' AND $_POST['type'] != '' ) {
 
-        $name = $_POST['form_name'];
-        $email = $_POST['form_email'];
-        $service = $_POST['form_service'];
-        $message = $_POST['form_message'];
+        $name = $_POST['full_name'];
+        $email = $_POST['email'];
+        $phone = $_POST['phone'];
+        $service = $_POST['type'];
+        $message = $_POST['info'];
 
         $subject = isset($subject) ? $subject : 'New Message | Request a Quote';
 
         $botcheck = $_POST['form_botcheck'];
 
-        $toemail = 'spam.thememascot@gmail.com'; // Your Email Address
-        $toname = 'ThemeMascot'; // Your Name
+        $toemail = 'contact@thesmartexporter.com'; // Your Email Address
+        $toname = 'The Smart Exporter'; // Your Name
 
         if( $botcheck == '' ) {
 
-            $mail->SetFrom( $toemail , $toname );
+            $mail->SetFrom( $email , $name );
             $mail->AddReplyTo( $email , $name );
             $mail->AddAddress( $toemail , $toname );
             $mail->Subject = $subject;
 
-            $name = isset($name) ? "Name: $name<br><br>" : '';
-            $email = isset($email) ? "Email: $email<br><br>" : '';
-            $service = isset($service) ? "Service: $service<br><br>" : '';
-            $message = isset($message) ? "Message: $message<br><br>" : '';
+            $name = isset($name) ? "<h3>Quotation Details:</h3> <br> <strong>Customer Name: </strong> $name <br>" : '';
+
+            $email = isset($email) ? "<strong> Email: </strong> $email<br>" : '';
+            $phone = isset($phone) ? "<strong> Phone:</strong> $phone<br>" : '';
+            $service = isset($service) ? "<strong> Fright Type:</strong> $service <br>" : '';
+            $message = isset($message) ? "<hr> <h4> Additional info: </h4> <p> $message </p> <br><br> <hr>" : '';
+
 
             $referrer = $_SERVER['HTTP_REFERER'] ? '<br><br><br>This Form was submitted from: ' . $_SERVER['HTTP_REFERER'] : '';
 

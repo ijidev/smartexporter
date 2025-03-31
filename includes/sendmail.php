@@ -8,10 +8,10 @@ $mail = new PHPMailer();
 
 //$mail->SMTPDebug = 3;                               // Enable verbose debug output
 $mail->isSMTP();                                      // Set mailer to use SMTP
-$mail->Host = 'thesmartexporter.com';                  // Specify main and backup SMTP servers
+$mail->Host = 'mail.thesmartexporter.com';                 // Specify main and backup SMTP servers
 $mail->SMTPAuth = true;                               // Enable SMTP authentication
-$mail->Username = 'support@thesmartecporter.com';    // SMTP username
-$mail->Password = '@admin?1234';                         // SMTP password
+$mail->Username = 'support@thesmartexporter.com';     // SMTP username
+$mail->Password = '@admin?1234';                      // SMTP password
 $mail->SMTPSecure = 'ssl';                            // Enable TLS encryption, `ssl` also accepted
 $mail->Port = 465;                                    // TCP port to connect to
 
@@ -36,17 +36,18 @@ if( $_SERVER['REQUEST_METHOD'] == 'POST' ) {
 
         if( $botcheck == '' ) {
 
-            $mail->SetFrom( $toemail , $toname );
+            $mail->SetFrom( $email , $name );
             $mail->AddReplyTo( $email , $name );
             $mail->AddAddress( $toemail , $toname );
             $mail->Subject = $subject;
 
-            $name = isset($name) ? "Name: $name<br><br>" : '';
-            $email = isset($email) ? "Email: $email<br><br>" : '';
-            $phone = isset($phone) ? "Phone: $phone<br><br>" : '';
-            $message = isset($message) ? "Message: $message<br><br>" : '';
+            $name = isset($name) ? "<h3>Customer Info:</h3> <br> <strong> Name: </strong> $name <br>" : '';
 
-            $referrer = $_SERVER['HTTP_REFERER'] ? '<br><br><br>This Form was submitted from: ' . $_SERVER['HTTP_REFERER'] : '';
+            $email = isset($email) ? "<strong> Email: </strong> $email<br>" : '';
+            $phone = isset($phone) ? "<strong> Phone:</strong> $phone<br>" : '';
+            $message = isset($message) ? "<hr> <h4> Massage: </h4> <p> $message </p> <br><br> <hr>" : '';
+
+            $referrer = $_SERVER['HTTP_REFERER'] ? '<br>This Form was submitted from: ' . $_SERVER['HTTP_REFERER'] : '';
 
             $body = "$name $email $phone $message $referrer";
 

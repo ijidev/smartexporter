@@ -15,7 +15,7 @@
 								<div class="inner-box">
 									<div class="icon-box"><i class="icon flaticon-international-shipping-2"></i></div>
 									<h4 class="title">Address</h4>
-									<div class="text">30 St Kilda Road, Jackson Store, Australia</div>
+									<div class="text">31/33 lyase street off Adedoyin street Kosofe Lagos</div>
 								</div>
 							</div>
 
@@ -25,8 +25,9 @@
 									<div class="icon-box"><i class="icon flaticon-stock-1"></i></div>
 									<h4 class="title">Contact</h4>
 									<div class="text">
-										<a href="support@thesmartexporter.com">support@thesmartexporter.com</a>
-										<a href="tel:+92(8800)48720">+92 (8800) 48720</a>
+										<a href="support@thesmartexporter.com">support@thesmartexporter.com</a> <br>
+										<a href="tel:+2348169243247">+234 816 924 3247</a> <br>
+										<a href="tel:+2347081124900">+234 708 112 4900</a>
 									</div>
 								</div>
 							</div>
@@ -45,11 +46,11 @@
 				<!-- End Contact info -->
 
 				<!--Widgets Section-->
-				<div class="widgets-section">
+				<!-- <div class="widgets-section">
 					<div class="auto-container">
-						<div class="row">
+						<div class="row"> -->
 							<!--Footer Column-->
-							<div class="footer-column col-xl-3 col-lg-12 col-md-6 col-sm-12">
+							<!-- <div class="footer-column col-xl-3 col-lg-12 col-md-6 col-sm-12">
 								<div class="footer-widget about-widget">
 									<div class="logo">
 										<a href="index.html"><img src="images/logo-2.png" alt="" /></a>
@@ -57,10 +58,10 @@
 									<div class="text">We work with a passion of taking challenges and creating new ones in advertising sector.</div>
 									<a href="page-about.html" class="theme-btn btn-style-one hvr-light small"><span class="btn-title">About</span></a>
 								</div>
-							</div>
+							</div> -->
 
 							<!--Footer Column-->
-							<div class="footer-column col-xl-3 col-lg-3 col-md-6 col-sm-12">
+							<!-- <div class="footer-column col-xl-3 col-lg-3 col-md-6 col-sm-12">
 								<div class="footer-widget">
 									<h3 class="widget-title">Service</h3>
 									<ul class="user-links">
@@ -71,7 +72,7 @@
 										<li><a href="#">Transparent Pricing</a></li>
 									</ul>
 								</div>
-							</div>
+							</div> -->
 
 							<!--Footer Column-->
 							<!-- <div class="footer-column col-xl-3 col-lg-4 col-md-6 col-sm-12">
@@ -108,7 +109,7 @@
 							</div> -->
 
 							<!--Footer Column-->
-							<div class="footer-column col-xl-3 col-lg-5 col-md-6 col-sm-12">
+							<!-- <div class="footer-column col-xl-6 col-lg-6 col-md-12 col-sm-12">
 								<div class="footer-widget">
 									<h3 class="widget-title">Newsletter</h3>
 									<div class="widget-content">
@@ -125,10 +126,10 @@
 										</div>
 									</div>
 								</div>
-							</div>
-						</div>
+							</div> -->
+						<!-- </div>
 					</div>
-				</div>
+				</div> -->
 
 				<!--Footer Bottom-->
 				<div class="footer-bottom">

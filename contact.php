@@ -35,7 +35,8 @@
 										</div>
 										<div class="text">
 											<h6>Have any question?</h6>
-											<a href="tel:980089850"><span>Free</span> +92 (020)-9850</a>
+											<a href="tel:+2347081124900"><span>Free</span> +234 708 112 4900</a>
+											<a href="tel:+2348169243247"><span>Free</span> +234 816 924 3247</a>
 										</div>
 									</li>
 									<li>
@@ -44,7 +45,7 @@
 										</div>
 										<div class="text">
 											<h6>Write email</h6>
-											<a href="mailto:needhelp@company.com">needhelp@company.com</a>
+											<a href="mailto:support@thesmartexporter.com">support@thesmartexporter.com</a>
 										</div>
 									</li>
 									<li>
@@ -53,7 +54,7 @@
 										</div>
 										<div class="text">
 											<h6>Visit anytime</h6>
-											<span>66 broklyn golden street. New York</span>
+											<span>31/33 lyase street off Adedoyin street Kosofe Lagos</span>
 										</div>
 									</li>
 								</ul>
@@ -70,13 +71,13 @@
 									<div class="col-sm-6">
 										<div class="mb-3">
 											<label>Name <small>*</small></label>
-											<input name="form_name" class="form-control" type="text" placeholder="Enter Name" />
+											<input name="form_name" class="form-control" required type="text" placeholder="Enter Name" />
 										</div>
 									</div>
 									<div class="col-sm-6">
 										<div class="mb-3">
 											<label>Email <small>*</small></label>
-											<input name="form_email" class="form-control required email" type="email" placeholder="Enter Email" />
+											<input name="form_email" class="form-control required email" type="email" placeholder="Enter Email" required />
 										</div>
 									</div>
 								</div>
@@ -90,13 +91,13 @@
 									<div class="col-sm-6">
 										<div class="mb-3">
 											<label>Phone</label>
-											<input name="form_phone" class="form-control" type="text" placeholder="Enter Phone" />
+											<input name="form_phone" class="form-control" type="text" required placeholder="Enter Phone" />
 										</div>
 									</div>
 								</div>
 								<div class="mb-3">
 									<label>Message</label>
-									<textarea name="form_message" class="form-control required" rows="5" placeholder="Enter Message"></textarea>
+									<textarea name="form_message" class="form-control required" required rows="5" placeholder="Enter Message"></textarea>
 								</div>
 								<div class="mb-3">
 									<input name="form_botcheck" class="form-control" type="hidden" value="" />

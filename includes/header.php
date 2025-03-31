@@ -38,9 +38,10 @@
 					<div class="top-left">
 						<!-- Info List -->
 						<ul class="list-style-one">
-							<li><i class="fa fa-map-marker-alt"></i> 380 St Kilda Road, Australia</li>
+							<li><i class="fa fa-map-marker-alt"></i> 31/33 lyase street off Adedoyin street Kosofe Lagos</li>
 							<li><i class="fa fa-clock"></i> Mon - Sat: 8am - 5pm</li>
-							<li><i class="fa fa-phone-volume"></i> <a href="tel:+92(8800)87890">+92 (8800) 87890</a></li>
+							<li><i class="fa fa-phone-volume"></i> <a href="tel:+2348169243247">+234 816 924 3247</a></li>
+							<li><i class="fa fa-phone-volume"></i> <a href="tel:+2347081124900">+234 708 112 4900</a></li>
 						</ul>
 					</div>
 

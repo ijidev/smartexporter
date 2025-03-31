@@ -644,7 +644,7 @@
 			<!-- End Fun Fact Section -->
 
 			
-			<!-- Why Choose Us -->
+			<!-- Why Choose Us/ Quote section -->
 			<section class="why-choose-us pull-up pb-0">
 				<div class="bg-image" style="background-image: url(./images/background/4.jpg)"></div>
 				<div class="anim-icons">
@@ -689,7 +689,7 @@
 								<!-- Contact Form -->
 								<div class="contact-form wow fadeInLeft">
 									<!--Contact Form-->
-									<form method="post" action=" " id="contact-form">
+									<form method="post" action="includes/request-a-quote.php" id="contact-form">
 										<div class="row">
 											<div class="col-lg-12 col-md-12 col-sm-12 form-group">
 												<label>Your Name:</label>
@@ -698,12 +698,12 @@
 
 											<div class="col-lg-6 col-md-6 col-sm-12 form-group">
 												<label>Your Email:</label>
-												<input type="text" name="Email" placeholder="" required />
+												<input type="text" name="email" placeholder="" required />
 											</div>
 
 											<div class="col-lg-6 col-md-6 col-sm-12 form-group">
 												<label>Phone No::</label>
-												<input type="text" name="Phone" placeholder="" required />
+												<input type="text" name="phone" placeholder="" required />
 											</div>
 
 											<!-- <div class="col-lg-12 col-md-12 col-sm-12 form-group">
@@ -716,13 +716,13 @@
 
 											<div class="col-lg-12 col-md-12 col-sm-12 form-group">
 												<label>Freight type:</label>
-												<select class="custom-select">
+												<select name="type" class="custom-select">
 													<option value="">Select</option>
 													<option value="air">Air Freight</option>
 													<option value="sea">Sea Freight</option>
 													<!-- <option value="">Rail transport</option> -->
 													<!-- <option value="">Cargo ship</option> -->
-													<option value="bulk">Bulk cargo</option>
+													<!-- <option value="bulk">Bulk cargo</option> -->
 												</select>
 											</div>
 
@@ -741,6 +741,7 @@
 												<textarea name="info" id=""></textarea>
 											</div>
 
+											<input name="form_botcheck" class="form-control" type="hidden" value="" />
 											<div class="col-lg-12 col-md-12 col-sm-12 form-group">
 												<button class="theme-btn btn-style-two hvr-light" type="submit" name="submit-form"><span class="btn-title">Submit Request</span></button>
 											</div>
@@ -795,9 +796,9 @@
 								</div>
 
 								<div class="founder-info">
-									<div class="thumb"><img src="https://via.placeholder.com/75x75" alt="" /></div>
+									<div class="thumb"><img class="thumb" src="images/ceo.jpg" alt="CEO - Adaora" /></div>
 									<h5 class="name">Adaora Onyeke</h5>
-									<span class="designation">CEO & Founder of Company</span>
+									<span class="designation">CEO & Founder Thesmart Exporter</span>
 								</div>
 							</div>
 						</div>
@@ -888,7 +889,7 @@
 									<span class="sub-title">Special Logistics</span>
 									<h2>Best services for businesses</h2>
 									<div class="text">
-										Trusty Courier Cargo service provides, top notch, hassle free and timely movement for all your 
+										The Smart Exporter provides, top notch, hassle free and timely movement for all your 
 										consignments through our air Freight services at very competitive.
 									</div>
 								</div>
@@ -897,7 +898,7 @@
 									<li><i class="fa fa-plane"></i> Top quality services with reasonable price</li>
 									<li><i class="fa fa-plane"></i> Reliable & experienced staffs</li>
 								</ul>
-								<a href="page-services.html" class="theme-btn btn-style-two hvr-light"><span class="btn-title">Explore More</span></a>
+								<!-- <a href="page-servicegit add .s.html" class="theme-btn btn-style-two hvr-light"><span class="btn-title">Explore More</span></a> -->
 							</div>
 						</div>
 
@@ -1006,16 +1007,16 @@
 			<!--End News Section -->
 
 			<!-- Clients Section   -->
-			<section class="clients-section">
+			<!-- <section class="clients-section">
 				<div class="anim-icon">
 					<span class="icon dotted-line-1"></span>
 					<span class="icon dotted-line-2"></span>
 				</div>
 
+				Sponsors Outer
 				<div class="auto-container">
-					<!-- Sponsors Outer -->
 					<div class="sponsors-outer">
-						<!--clients carousel-->
+						 clients carousel
 						<ul class="clients-carousel owl-carousel owl-theme">
 							<li class="slide-item">
 								<a href="#"><img src="images/clients/1.jpg" alt="" /></a>
@@ -1035,6 +1036,6 @@
 						</ul>
 					</div>
 				</div>
-			</section>
+			</section> -->
 			<!--End Clients Section -->
 <?php include('includes/footer.php') ?>
